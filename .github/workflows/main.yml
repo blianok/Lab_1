@@ -1,0 +1,19 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main  # Укажите ветку, для которой будет выполняться CI
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Укажите среду выполнения
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Клонируем код из репозитория
+        
+      - name: Install dependencies
+        run: npm install  # Установите зависимости (если используете Node.js)
+        
+      - name: Run tests
+        run: npm test  # Запустите тесты
