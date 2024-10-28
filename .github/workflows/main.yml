@@ -7,13 +7,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Укажите среду выполнения
+    runs-on: ubuntu-latest  
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # Клонируем код из репозитория
+        uses: actions/checkout@v4  
         
       - name: Install dependencies
-        run: npm install  # Установите зависимости (если используете Node.js)
+        run: npm install  
         
       - name: Run tests
-        run: npm test  # Запустите тесты
+        run: npm test  
